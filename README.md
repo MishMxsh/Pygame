@@ -2,8 +2,6 @@
 import pygame
 import random
 
-
-
 WIDTH = 480
 HEIGHT = 600
 FPS = 60
@@ -24,7 +22,6 @@ clock = pygame.time.Clock()
 running = True
 while running:
     clock.tick (FPS)
-    
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -38,7 +35,6 @@ all_sprites = pygame.sprite.Group()
 
 running = True
 while running:
-    
     clock.tick(FPS)
     
     for event in pygame.event.get():
@@ -62,7 +58,6 @@ GREEN = (0,255,0)
 BLUE = (0,0,255)
 
 class Player(pygame.sprite.Sprite):
-    
     def __init__(self):
         
         pygame.sprite.Sprite.__init__(self)
@@ -73,8 +68,6 @@ class Player(pygame.sprite.Sprite):
         self.rect.bottom = HEIGHT-10
         
         self.speedx = 0
-
-
     def update(self):
         self.speedx = 0
         keystate = pygame.key.get_pressed()
